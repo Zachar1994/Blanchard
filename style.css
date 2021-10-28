@@ -8,11 +8,15 @@ a {
 body {
     margin: 0;
 }
+h1,h2,h3,h4,h5,h6 {
+    margin-top: unset;
+    margin-bottom: unset;
+}
 html {
     font-family: 'Open Sans';
 }
 .container {
-    width: 1600px;
+    width: 1660px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 30px;
@@ -95,6 +99,107 @@ html {
 
 
 
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  .list {
+    display: flex;
+    gap: 97px;
+    justify-content: space-between;
+  }
+  .list--item__btn {
+    background-color: transparent;
+    border: 1px solid grey;
+    padding: 5px 20px;
+    
+    cursor: pointer;
+    
+    color: #fff;
+    transition-propery: background-color;
+    transition: .3s ease-in-out;
+  }
+  .list--item__btn:hover:not(:active) ,
+  .list--item__btn:focus:not(:focus-visible),
+  .list--item__btn:focus-visible,
+  .list--item__btn.active--btn {
+    background-color: rgba(0, 0, 0);
+  }
+  
+  .list--item__btn:focus-visible {
+    outline: 0;
+  }
+  .list--item__btn:active {
+    background-color: rgba(0,0,0, 0.2);
+  }
+  .list--item {
+    position: relative;
+  }
+  .container--dropdown {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 46px;
+    z-index: 5;
+    display: none;
+  }
+  
+  .container--dropdown-list__item {
+    padding: 20px;
+  }
+  .container--dropdown-list__item:last-child {
+    border: 0;
+  }
+  
+  .active-list--item {
+    display: block;
+  }
+  .list--item__btn.active--btn:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+  }
+  
+  
+  
+  .simplebar {
+    width: 241px;
+    height: 220px;
+    margin-left: 40px;
+    margin-top: 40px;
+    
+  }
+  .simplebar__item {
+    width: 220px;
+    min-height: 30px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .simplebar__item:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .simplebar .simplebar-track.simplebar-vertical {
+    background-color: grey;
+    width: 2px;
+  }
+  .simplebar .simplebar-scrollbar {
+    width: 2px;
+    background-color: pink;
+  }
+  
+
+
+
+/*
 .navbar-nav {
     display: flex;
     gap: 97px;
@@ -176,13 +281,14 @@ html {
     opacity: 1;
     background: white;
 }
-
+*/
 .header__bottom-form {
     display: flex;
     align-items: center;
     gap: 9px;
 }
 .header__bottom-form-item {
+    width: 218px;
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
@@ -209,46 +315,59 @@ html {
 
 
 /*hero*/
+
+.hero__container {
+    width: 1660px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 63px;
+    padding-bottom: 122px;
+    position: relative;
+    z-index: 1;
+  }
+
+
 .hero {
     position: relative;
-    overflow: hidden;
-    padding-top: 133px;
-    padding-bottom: 122px;
-    top: -80px;
-    z-index: -1;
-    width: 100%;
-   
-}
-.hero::before {
-    content: '';
+    height: 100%;
+  }
+  .hero .swiper {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -100px;
     left: 0;
+    right: 0;
     bottom: 0;
     z-index: -1;
-    background: url('img/hero-slide1.jpg') no-repeat center;
-    max-width: 100%;
+  }
+  .swiper-slide:nth-child(1) {
+    background: url('img/hero-slide1.jpg') no-repeat;
     background-size: cover;
-    animation: pulse 4s infinite;
-    overflow: hidden;
-}
+    background-position: center;
+  }
+  .swiper-slide:nth-child(2) {
+    background: url('img/hero-slide-2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-slide:nth-child(3) {
+    background:url('img/hero-slide3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
 
 
 .hero__head {
-    color: white;
+    color:white;
     max-width: 597px;
-  /*  padding-top: 133px;*/
     font-size: 72px;
     line-height: 98px;
-    margin-top: unset;
-    margin-bottom: unset;
     font-weight: 700;
 }
 .hero__text {
     color: white;
     max-width: 597px;
+    margin-top: 1px;
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 92px;
@@ -286,6 +405,7 @@ html {
     font-size: 16px;
     line-height: 32px;
     font-weight: 400;
+    margin-top: unset;
     padding-bottom: 80px;
 }
 
