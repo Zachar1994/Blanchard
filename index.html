@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="style.css">
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js" integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <title>Document</title>
 </head>
@@ -73,73 +72,89 @@
 
                 <ul class="list">
                     <li class="list--item">
-                      <button class="list--item__btn">Item 1</button>
-                      <div class="container--dropdown simplebar-container">
-                            <ul class="simplebar">
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
-                              <li class="simplebar__item">text</li>
+                      <a class="list--item__btn">
+                          Реализм
+                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
+                        </a>
+                      <div class="container--dropdown">
+                            <ul class="simplebar" data-simplebar>
+                              <li class="simplebar__item" style="background: url('img/drop1-1.jpg');"><a href="#">text</a></li>
+                              <li class="simplebar__item"  style="background: url('img/drop1-2.jpg');"><a href="#">text</a></li>
+                              <li class="simplebar__item"  style="background: url('img/drop1-3.jpg');"><a href="#">text</a></li>
+                              <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+                              <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
                             </ul>      
                       </div>
                       </li>
                     <li class="list--item">
-                      <button href="" class="list--item__btn">Item 2</button>
-                      <div class="container--dropdown simplebar-container">
+                      <button href="" class="list--item__btn">
+                          Импрессионизм
+                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
+                     </button>
+                     <div class="container--dropdown">
+                        <ul class="simplebar" data-simplebar>
+                          <li class="simplebar__item"  style="background: url('img/drop2-1.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop2-2.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop2-3.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop2-4.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+                        </ul>      
+                  </div>
 
-                        <ul class="simplebar">
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                        </ul>        
-                  </div>
+
                       </li>
                     <li class="list--item">
-                      <button class="list--item__btn">Item 3</button>
-                      <div class="container--dropdown simplebar-container">
-                        <ul class="simplebar">
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
+                      <button class="list--item__btn">
+                          Постимпрессионизм
+                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
+                      </button>
+                      <div class="container--dropdown">
+                        <ul class="simplebar" data-simplebar>
+                          <li class="simplebar__item"  style="background: url('img/drop3-1.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop3-2.jpg');"><a href="#"> text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop3-3.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop3-4.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
                         </ul>      
                   </div>
                       </li>
                     <li class="list--item">
-                      <button class="list--item__btn">Item 4</button>
-                      <div class="container--dropdown simplebar-container">
-                        <ul class="simplebar">
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
+                      <button class="list--item__btn">
+                          Авангард
+                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
+                      </button>
+                      <div class="container--dropdown">
+                        <ul class="simplebar" data-simplebar>
+                          <li class="simplebar__item"  style="background: url('img/drop4-1.jpg');"><a href="#"> text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop4-2.jpg');"><a href="#"> text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop4-3.jpg');"><a href="#"> text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop4-4.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#"> text</a></li>
                         </ul>      
                   </div>
                       </li>
                     <li class="list--item">
-                      <button class="list--item__btn">Item 5</button>
-                      <div class="container--dropdown simplebar-container">
-                        <ul class="simplebar">
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
-                          <li class="simplebar__item">text</li>
+                      <button class="list--item__btn">
+                          Футуризм
+                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
+                     </button>
+                      <div class="container--dropdown">
+                        <ul class="simplebar" data-simplebar>
+                          <li class="simplebar__item"  style="background: url('img/drop5-1.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop5-2.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop5-3.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop5-4.jpg');"><a href="#">text</a></li>
+                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
                         </ul>      
                        </div>
                       </li>
