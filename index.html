@@ -2,210 +2,228 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css"
+    integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 
-    
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
+    integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="header__top">
+  <header>
+    <div class="header__top">
 
-            <div class="container header__container">
-
-                <img src="img/logo (2).svg" alt="Blanchard logo" class="header__logo">
-
-                <div class="header__navigation">
-
-                    <div class="menu-burger__header"><span></span></div>
-
-                    <nav class="header__nav">
-                        <ul class="menu header__menu">
-                            <li><a href="#" class="menu__item">О нас</a></li>
-                            <li><a href="#" class="menu__item">Галерея</a></li>
-                            <li><a href="#" class="menu__item">Каталог</a></li>
-                            <li><a href="#" class="menu__item">События</a></li>
-                            <li><a href="#" class="menu__item">Издания</a></li>
-                            <li><a href="#" class="menu__item">Проекты</a></li>
-                            <li><a href="#" class="menu__item">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <script src="menu.js"></script>
-
-                </div>
+      <div class="container header__container">
 
 
+        <div class="header__menu-top">
+          <div class="menu-burger__header"><span></span></div>
 
-                <div class="header__entrance">
-
-                    <div class="header__entrance-search">
-                        <img src="img/entrance.svg" alt="">
-                    </div>
-                    <a href="#">
-                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                                fill="white" />
-                        </svg>
-                        Войти
-                    </a>
-
-                </div>
-
-            </div>
+          <nav class="header__nav">
+            <ul class="menu header__menu">
+              <li><a href="#" class="menu__item">О нас</a></li>
+              <li><a href="#" class="menu__item">Галерея</a></li>
+              <li><a href="#" class="menu__item">Каталог</a></li>
+              <li><a href="#" class="menu__item">События</a></li>
+              <li><a href="#" class="menu__item">Издания</a></li>
+              <li><a href="#" class="menu__item">Проекты</a></li>
+              <li><a href="#" class="menu__item">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="header__bottom">
-
-            <div class="container header__container">
-
-               
-
-                <ul class="list">
-                    <li class="list--item">
-                      <a class="list--item__btn">
-                          Реализм
-                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="white"/>
-                          </svg>
-                        </a>
-                      <div class="container--dropdown">
-                            <ul class="simplebar" data-simplebar>
-                              <li class="simplebar__item" style="background: url('img/drop1-1.jpg');"><a href="#">text</a></li>
-                              <li class="simplebar__item"  style="background: url('img/drop1-2.jpg');"><a href="#">text</a></li>
-                              <li class="simplebar__item"  style="background: url('img/drop1-3.jpg');"><a href="#">text</a></li>
-                              <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
-                              <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
-                            </ul>      
-                      </div>
-                      </li>
-                    <li class="list--item">
-                      <button href="" class="list--item__btn">
-                          Импрессионизм
-                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="white"/>
-                          </svg>
-                     </button>
-                     <div class="container--dropdown">
-                        <ul class="simplebar" data-simplebar>
-                          <li class="simplebar__item"  style="background: url('img/drop2-1.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop2-2.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop2-3.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop2-4.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
-                        </ul>      
-                  </div>
 
 
-                      </li>
-                    <li class="list--item">
-                      <button class="list--item__btn">
-                          Постимпрессионизм
-                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="white"/>
-                          </svg>
-                      </button>
-                      <div class="container--dropdown">
-                        <ul class="simplebar" data-simplebar>
-                          <li class="simplebar__item"  style="background: url('img/drop3-1.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop3-2.jpg');"><a href="#"> text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop3-3.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop3-4.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
-                        </ul>      
-                  </div>
-                      </li>
-                    <li class="list--item">
-                      <button class="list--item__btn">
-                          Авангард
-                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="white"/>
-                          </svg>
-                      </button>
-                      <div class="container--dropdown">
-                        <ul class="simplebar" data-simplebar>
-                          <li class="simplebar__item"  style="background: url('img/drop4-1.jpg');"><a href="#"> text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop4-2.jpg');"><a href="#"> text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop4-3.jpg');"><a href="#"> text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop4-4.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#"> text</a></li>
-                        </ul>      
-                  </div>
-                      </li>
-                    <li class="list--item">
-                      <button class="list--item__btn">
-                          Футуризм
-                          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L6 6L1 1" stroke="white"/>
-                          </svg>
-                     </button>
-                      <div class="container--dropdown">
-                        <ul class="simplebar" data-simplebar>
-                          <li class="simplebar__item"  style="background: url('img/drop5-1.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop5-2.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop5-3.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop5-4.jpg');"><a href="#">text</a></li>
-                          <li class="simplebar__item"  style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
-                        </ul>      
-                       </div>
-                      </li>
-                  </ul>
+        <div class="header__logo">
+          <img src="img/logo (2).svg" alt="Blanchard logo" style="width:100%">
+        </div>
 
 
-                <form action="search" class="header__bottom-form">
-                    <img src="img/entrance.svg" alt="">
-                    <input type="search" id="search" placeholder="Поиск по сайту" class="header__bottom-form-item">
-                </form>
+        <div class="header__navigation">
+          <nav class="header__nav">
+            <ul class="menu header__menu">
+              <li><a href="#" class="menu__item">О нас</a></li>
+              <li><a href="#" class="menu__item">Галерея</a></li>
+              <li><a href="#" class="menu__item">Каталог</a></li>
+              <li><a href="#" class="menu__item">События</a></li>
+              <li><a href="#" class="menu__item">Издания</a></li>
+              <li><a href="#" class="menu__item">Проекты</a></li>
+              <li><a href="#" class="menu__item">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <a href="#">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="white" />
+            </svg>
+            Войти
+          </a>
+
+          <script src="menu.js"></script>
+        </div>
 
 
+        <div class="header__entrance-search">
+          <img src="img/entrance.svg" alt="">
+        </div>
+
+      </div>
+    </div>
+
+<div class="header__bottom">
+
+      <div class="container header__container">
+
+
+
+        <ul class="list">
+          <li class="list--item">
+            <a class="list--item__btn">
+              Реализм
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </a>
+            <div class="container--dropdown simplebar-container">
+              <ul class="simplebar">
+                <li class="simplebar__item" style="background: url('img/drop1-1.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-2.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-3.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+              </ul>
             </div>
-        </div>
-        
-        <script src="dropdown.js"></script>
-        <script src="scrollbar.js"></script>
-
-    </header>
-
-    <section class="hero">
-
-
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
-          
-           </div>
-            <!-- If we need pagination -->
-        </div>
-            <div class="container hero__container">
-                <h1 class="hero__head"> Прикоснитесь к прекрасному</h1>
-                <p class="hero__text">
-                    Мы вынуждены отталкиваться от того,
-                    что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-                </p>
-                <button class="hero__bth">Подписаться на рассылку</button>
+          </li>
+          <li class="list--item">
+            <button href="" class="list--item__btn">
+              Импрессионизм
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
+            <div class="container--dropdown simplebar-container">
+              <ul class="simplebar">
+                <li class="simplebar__item" style="background: url('img/drop2-1.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop2-2.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop2-3.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop2-4.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+              </ul>
             </div>
 
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-            <script src="swiper.js"></script>
+          </li>
+          <li class="list--item">
+            <button class="list--item__btn">
+              Постимпрессионизм
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
+            <div class="container--dropdown">
+              <ul class="simplebar">
+                <li class="simplebar__item" style="background: url('img/drop3-1.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop3-2.jpg');"><a href="#"> text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop3-3.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop3-4.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="list--item">
+            <button class="list--item__btn">
+              Авангард
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
+            <div class="container--dropdown">
+              <ul class="simplebar">
+                <li class="simplebar__item" style="background: url('img/drop4-1.jpg'); "><a href="#"> text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop4-2.jpg');"><a href="#"> text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop4-3.jpg');"><a href="#"> text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop4-4.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#"> text</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="list--item">
+            <button class="list--item__btn">
+              Футуризм
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
+            <div class="container--dropdown">
+              <ul class="simplebar">
+                <li class="simplebar__item" style="background: url('img/drop5-1.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop5-2.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop5-3.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop5-4.jpg');"><a href="#">text</a></li>
+                <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">text</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+        <form action="search" class="header__bottom-form">
+          <img src="img/entrance.svg" alt="">
+          <input type="search" id="search" placeholder="Поиск по сайту" class="header__bottom-form-item">
+        </form>
+
+
+      </div>
+    </div>
+
+    <script src="dropdown.js"></script>
+    <script src="scrollbar.js"></script>
+
+  </header>
+
+  <section class="hero">
+
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+
+      </div>
+      <!-- If we need pagination -->
+    </div>
+    <div class="container hero__container">
+      <h1 class="hero__head"> Прикоснитесь к прекрасному</h1>
+      <p class="hero__text">
+        Мы вынуждены отталкиваться от того,
+        что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+      </p>
+      <button class="hero__bth">Подписаться на рассылку</button>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="swiper.js"></script>
 
   </section>
 
-       
-       
+
+
   <!--
       <section class="about__us">
         <div class="container">
@@ -229,7 +247,7 @@
     </section>
   -->
 
-    
+
 
 
 

@@ -23,6 +23,9 @@ html {
 }
 *{box-sizing: border-box;}
 
+:focus-visible {
+    outline: 0;
+}
 /*Header*/
 .header__top {
     background: black;
@@ -36,45 +39,78 @@ html {
     align-items: center;
 }
 
+.header__logo {
+    margin-right: auto;
+}
+
+
+.header__nav {
+    display: block;
+    width: calc(71% + 4px);
+}
+.header__menu {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+
 .menu__item {
     color: white;
-    transition: 300ms;
     font-size: 18px;
     line-height: 25px;
+    position: relative;
+}
+a.menu__item::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    background-color: #C283F3;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+a.menu__item:focus::after {
+    opacity: 1; 
 }
 .menu__item:hover {
-    width: 92px;
-    height: 29px;
-    background: #7943A4;
-    padding: 6px; 
+   color:#C283F3; 
 }
 .menu__item:active {
-    color: #C283F3;
-    background: none;
+    color: #9D5CD0;
 }
-.header__entrance {
-    margin-left: auto;
-}
+
 .header__navigation {
-    margin-left: 179px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 78%;
 }
-.header__entrance a {
+
+.header__navigation a {
     font-size: 18px;
     line-height: 25px;
     color: white;
     transition: 200ms;
 }
-.header__entrance a:hover {
+.header__navigation a:focus {
+    background-color: #7943A4;
+    padding: 5px;
+}
+.header__navigation a:hover {
     color: #C283F3;   
 }
-.header__entrance a:active {
+.header__navigation a:active {
     background: none;
     color: #9D5CD0;
 }
-.header__entrance a:hover svg path {
+.header__navigation a:hover svg path {
     fill: #C283F3;
 }
-.header__entrance a:active svg path {
+.header__navigation a:active svg path {
     fill: #9D5CD0;
 }
 .header__entrance img {
@@ -82,18 +118,7 @@ html {
 }
 
 
-.header__nav {
-    display: block;
-}
-.header__menu {
-    display: flex;
-    gap: 65px;
-}
-.header__menu li {
-	list-style: none;
-	color: white;
-	font-size: 16px;
-}
+
 .content-wrapper{
     margin-top: 78px;
     padding: 10px;
@@ -108,7 +133,7 @@ html {
 }
 
 
-
+/*dropdown-menu*/
 ul {
     list-style: none;
     padding: 0;
@@ -126,14 +151,34 @@ ul {
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
- 
   }
-  .list--item__btn:hover:not(:active) ,
-  .list--item__btn:focus:not(:focus-visible),
-  .list--item__btn:focus-visible,
-  .list--item__btn.active--btn{
-    border: none;
+  .list--item__btn:focus {
+     background-color: #7943A4;
+     padding: 5px;
   }
+  .list--item__btn:hover {
+      color: #9D5CD0;
+  }
+  .list--item__btn:hover svg path{
+    stroke: #9D5CD0;
+  }
+  .list--item__btn.active--btn {
+      color:  #7943A4;
+  }
+  .list--item__btn.active--btn:focus {
+      color: white
+  }
+  .list--item__btn.active--btn:focus svg path {
+    stroke: white
+}
+  .list--item__btn.active--btn svg {
+      transform: rotate(180deg);
+  }
+  .list--item__btn.active--btn svg path {
+      stroke:  #7943A4;
+  }
+
+  
 
   .list--item {
     position: relative;
@@ -160,8 +205,8 @@ ul {
     display: block;
   }
   
-  
-  
+  /*------*/
+  /*Simplebar*/
   
   .simplebar {
     width: 241px;
@@ -185,6 +230,12 @@ ul {
     height: 40px;
     margin-bottom: 20px;
   }
+  .simplebar__item:hover {
+    border: 2px solid #9D5CD0;
+  }
+  .simplebar__item:active {
+    border: 2px solid #c388f0
+  }
   .simplebar__item:last-child {
     margin-bottom: 0px;
   }
@@ -199,7 +250,8 @@ ul {
     background-color: white;
   }
  
- 
+ /*--------*/
+
 .header__bottom-form {
     margin-left: auto;
     display: flex;
@@ -303,6 +355,7 @@ ul {
     line-height: 25px;
     font-weight: 700;
 }
+
 .hero__bth:hover {
     border: 2px solid #C283F3;
 }
@@ -388,6 +441,10 @@ ul {
       .header__entrance-search {
           display: none;
       }
+      .header__menu-top {
+          display: none;
+      }
+      
   }
 
 
@@ -398,11 +455,13 @@ ul {
         display: none;
     }
     .header__navigation {
-        order: -1;
-    }
-    .header__entrance a {
         display: none;
     }
+    
+    .header__logo {
+        margin: unset;
+    }
+    
     .hero__container {
         padding-top: 120px;
         padding-bottom: 114px;
@@ -424,7 +483,6 @@ ul {
     }
     .header__nav.open-menu{
         left:0;
-
     }
     .header__menu li {
         margin: 40px 0px 40px 33px;
@@ -474,18 +532,12 @@ ul {
         width: 28px;
         transition: 0.4s;
     }
-    
-    header {
-        height: 60px;
-    }
     .content-wrapper {
         margin-top: 48px;
     }
     .fixed-pade {
         overflow: hidden;
     }
-    
-
 }
 
 @media(max-width: 758px) {
