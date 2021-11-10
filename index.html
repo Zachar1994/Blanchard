@@ -10,12 +10,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css"
     integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
   <link rel="stylesheet" href="style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
     integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
   <title>Document</title>
 </head>
 
@@ -52,13 +55,13 @@
         <div class="header__navigation">
           <nav class="header__nav">
             <ul class="menu header__menu">
-              <li><a href="#" class="menu__item">О нас</a></li>
-              <li><a href="#" class="menu__item">Галерея</a></li>
-              <li><a href="#" class="menu__item">Каталог</a></li>
-              <li><a href="#" class="menu__item">События</a></li>
-              <li><a href="#" class="menu__item">Издания</a></li>
-              <li><a href="#" class="menu__item">Проекты</a></li>
-              <li><a href="#" class="menu__item">Контакты</a></li>
+              <li><a href="#" class="menu__item focus__bg">О нас</a></li>
+              <li><a href="#" class="menu__item focus__bg">Галерея</a></li>
+              <li><a href="#" class="menu__item focus__bg">Каталог</a></li>
+              <li><a href="#" class="menu__item focus__bg">События</a></li>
+              <li><a href="#" class="menu__item focus__bg">Издания</a></li>
+              <li><a href="#" class="menu__item focus__bg">Проекты</a></li>
+              <li><a href="#" class="menu__item focus__bg">Контакты</a></li>
             </ul>
           </nav>
 
@@ -90,7 +93,7 @@
 
         <ul class="list">
           <li class="list--item">
-            <button class="list--item__btn">
+            <button class="list--item__btn  focus__bg">
               Реализм
               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1" stroke="white" />
@@ -107,7 +110,7 @@
             </div>
           </li>
           <li class="list--item">
-            <button class="list--item__btn">
+            <button class="list--item__btn  focus__bg">
               Импрессионизм
               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1" stroke="white" />
@@ -126,7 +129,7 @@
 
           </li>
           <li class="list--item">
-            <button class="list--item__btn">
+            <button class="list--item__btn focus__bg">
               Постимпрессионизм
               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1" stroke="white" />
@@ -143,7 +146,7 @@
             </div>
           </li>
           <li class="list--item">
-            <button class="list--item__btn">
+            <button class="list--item__btn  focus__bg">
               Авангард
               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1" stroke="white" />
@@ -160,7 +163,7 @@
             </div>
           </li>
           <li class="list--item">
-            <button class="list--item__btn">
+            <button class="list--item__btn  focus__bg">
               Футуризм
               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1" stroke="white" />
@@ -245,7 +248,73 @@
 
         </div>
     </section>
- 
+
+    <section class="swiper-section">
+           <div class="container">
+                  
+            <div class="swiper-left--content">
+                <div class="div">
+                   <h2 class="section__head" style="margin-top: unset; color: white; margin-bottom: 30px;">Галерея</h2>
+                   <p class="list__name">Фильтр:</p>
+                    <select name="select" id="select" class="select">
+                       <option value="Stajors">Живопись</option>
+                       <option value="city">Рисунок</option>
+                       <option value="city">Скульптура</option>
+                  </select>
+                </div>
+                <p>
+                  Вам предоставляется 10 бесплатных скачиваний. 
+                  Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+                </p>
+                  
+            </div>
+            <div class="swiper swiper-right--content">
+              <div class="swiper-right-btns">
+                <button class="sw-btn swiper-btn--prev"><img src="img/prev.svg" alt=""></button>
+                <div class="swiper-pagination--right"></div>
+                <button class="sw-btn swiper-btn--next"><img src="img/next.svg" alt=""></button>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery1.jpg');">
+                </div>
+               <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery2.jpg');">
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery3.jpg');">
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery4.jpg');" >
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery5.jpg');">
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery6.jpg');">
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery7.jpg');">
+                </div>
+                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery8.jpg');">
+                </div>
+                <div class="swiper-slide" data-tab="city" style="background: url('img/gallery9.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery10.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery11.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery12.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery13.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery14.jpg');">
+                </div>
+                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery15.jpg');">
+                </div>
+              </div>
+              <p>
+                Вам предоставляется 10 бесплатных скачиваний. 
+                Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+              </p>
+            </div>
+
+
+             <script src="gallery.js"></script>
+             <script src="select.js"></script>
 
 
 
@@ -253,6 +322,11 @@
 
 
 
+
+
+
+           </div>
+    </section>
 </body>
 
 </html>
