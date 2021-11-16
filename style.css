@@ -595,7 +595,7 @@ ul {
   
   .list__name {
     color: white;
-    margin-bottom: 9px;
+    margin-bottom: 15px;
   }
   
   .swiper-section .container {
@@ -613,13 +613,14 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    height: 860px;
     color: white;
   }
-  .swiper-left--content p {
+  .swiper-left--content-text {
     font-weight: 600;
     font-size: 16px;
     line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: unset;
   }
   
   .swiper-right--content {
@@ -683,7 +684,8 @@ ul {
     justify-content: flex-start;
     align-items: center;
     height: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   .swiper-pagination--right {
     max-width: 50px;
