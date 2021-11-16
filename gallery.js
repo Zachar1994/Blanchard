@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         rows: 2
       },
       spaceBetween: 34,
-      outerHeight: 280
     },
 
     1350: {

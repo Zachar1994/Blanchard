@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css"
     integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
@@ -25,47 +25,65 @@
 <body>
   <header>
     <div class="header__top">
-
       <div class="container header__container">
+        <div class="header__top-burger">
 
-
-        <div class="header__menu-top">
-          <div class="menu-burger__header"><span></span></div>
+          <button class="header__btn-open">
+            <svg width="36" height="28" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="2" fill="white" />
+              <rect y="8" width="15" height="2" fill="white" />
+              <rect y="16" width="10" height="2" fill="white" />
+            </svg>
+          </button>
 
           <nav class="header__nav">
-            <ul class="menu header__menu">
-              <li><a href="#" class="menu__item">О нас</a></li>
-              <li><a href="#" class="menu__item">Галерея</a></li>
-              <li><a href="#" class="menu__item">Каталог</a></li>
-              <li><a href="#" class="menu__item">События</a></li>
-              <li><a href="#" class="menu__item">Издания</a></li>
-              <li><a href="#" class="menu__item">Проекты</a></li>
-              <li><a href="#" class="menu__item">Контакты</a></li>
+            <button class="nav__close">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.09094" width="38" height="3.73" transform="rotate(45 2.09094 0)" fill="white" />
+                <rect y="20.9092" width="38" height="3.73" transform="rotate(-45 0 20.9092)" fill="white" />
+              </svg>
+            </button>
+            <ul class="header__list">
+              <li class="header__item"><a href="#" class="header__link focus__bg">О нас</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">Галерея</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">Каталог</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">События</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">Издания</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">Проекты</a></li>
+              <li class="header__item"><a href="#" class="header__link focus__bg">Контакты</a></li>
             </ul>
+
+            <button class="header__nav-entrance">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                  fill="white" />
+              </svg>
+              Войти
+            </button>
           </nav>
+
+          <script src="JS/menu.js"></script>
+
         </div>
 
-
-
         <div class="header__logo">
-          <img src="img/logo.svg" alt="Blanchard logo" style="width:100%">
+          <img src="img/logo.svg" alt="">
         </div>
 
 
         <div class="header__navigation">
-          <nav class="header__nav">
-            <ul class="menu header__menu">
-              <li><a href="#" class="menu__item focus__bg">О нас</a></li>
-              <li><a href="#" class="menu__item focus__bg">Галерея</a></li>
-              <li><a href="#" class="menu__item focus__bg">Каталог</a></li>
-              <li><a href="#" class="menu__item focus__bg">События</a></li>
-              <li><a href="#" class="menu__item focus__bg">Издания</a></li>
-              <li><a href="#" class="menu__item focus__bg">Проекты</a></li>
-              <li><a href="#" class="menu__item focus__bg">Контакты</a></li>
-            </ul>
-          </nav>
+          <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__link focus__bg">О нас</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg ">Галерея</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg">Каталог</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg">События</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg">Издания</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg">Проекты</a></li>
+            <li class="header__item"><a href="#" class="header__link focus__bg">Контакты</a></li>
+          </ul>
 
-          <a href="#">
+          <a href="#" class="focus__bg">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
@@ -73,10 +91,7 @@
             </svg>
             Войти
           </a>
-
-          <script src="JS/menu.js"></script>
         </div>
-
 
         <div class="header__entrance-search">
           <img src="img/entrance.svg" alt="">
@@ -85,10 +100,11 @@
       </div>
     </div>
 
-<div class="header__bottom">
+
+
+    <div class="header__bottom">
 
       <div class="container header__container">
-
 
 
         <ul class="list">
@@ -125,8 +141,6 @@
                 <li class="simplebar__item" style="background: url('img/drop1-4.jpg');"><a href="#">Гонен</a></li>
               </ul>
             </div>
-
-
           </li>
           <li class="list--item">
             <button class="list--item__btn focus__bg">
@@ -194,21 +208,17 @@
     <script src="JS/dropdown.js"></script>
     <script src="JS/scrollbar.js"></script>
 
-  </header>
-
-  <section class="hero">
+</header>
 
 
-    <div class="swiper">
-      <!-- Additional required wrapper -->
+
+<section class="hero">
+    <div class="swiper ">
       <div class="swiper-wrapper">
-        <!-- Slides -->
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
-
       </div>
-      <!-- If we need pagination -->
     </div>
     <div class="container hero__container">
       <h1 class="hero__head"> Прикоснитесь к прекрасному</h1>
@@ -220,17 +230,14 @@
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script src="JS/swiper.js"></script>
-
-  </section>
-
+</section>
 
 
   
-      <section class="about__us">
+   <section class="about__us">
         <div class="container">
-            <h2 class="section__head">О нас</h2>
+            <h2 class="section__head about__us-head">О нас</h2>
 
             <p class="about__us-text">
                 Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет
@@ -249,12 +256,16 @@
         </div>
     </section>
 
-    <section class="swiper-section">
-           <div class="container">
+
+
+
+    
+       <section class="gallery swiper-section">
+           <div class="container gallery__container">
                   
             <div class="swiper-left--content">
                 <div class="div">
-                   <h2 class="section__head" style="margin-top: unset; color: white; margin-bottom: 30px;">Галерея</h2>
+                   <h2 class="section__head gallery__head" style="margin-top: unset; color: white; margin-bottom: 15px;">Галерея</h2>
                    <p class="list__name">Фильтр:</p>
                     <select name="select" id="select" class="select">
                        <option value="Stajors">Живопись</option>
@@ -262,71 +273,81 @@
                        <option value="city">Скульптура</option>
                   </select>
                 </div>
-                <p>
+                <p class="swiper-left--content-text">
                   Вам предоставляется 10 бесплатных скачиваний. 
                   Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
-                </p>
-                  
+                </p> 
             </div>
+
             <div class="swiper swiper-right--content">
               <div class="swiper-right-btns">
-                <button class="sw-btn swiper-btn--prev"><img src="img/prev.svg" alt=""></button>
-                <div class="swiper-pagination--right"></div>
-                <button class="sw-btn swiper-btn--next"><img src="img/next.svg" alt=""></button>
+                  <button class="sw-btn swiper-btn--prev"><img src="img/prev.svg" alt=""></button>
+                  <div class="swiper-pagination--right"></div>
+                  <button class="sw-btn swiper-btn--next"><img src="img/next.svg" alt=""></button>
               </div>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery1.jpg');">
+              <div class="gallery__wrapper  swiper-wrapper">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                    <img src="img/gallery1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-               <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery2.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery3.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery4.jpg');" >
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors" >
+                  <img src="img/gallery4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery5.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery6.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery6.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery7.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery7.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide slides-active" data-tab="Stajors" style="background: url('img/gallery8.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/gallery8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="swiper-slide" data-tab="city" style="background: url('img/gallery9.jpg');">
+                <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery9.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery10.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery10.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery11.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery11.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery12.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery12.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery13.jpg');">
+                 <div class="gallery__slide  swiper-slide" >
+                  <img src="img/gallery13.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery14.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery14.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                 <div class="swiper-slide" data-tab="city" style="background: url('img/gallery15.jpg');">
+                 <div class="gallery__slide  swiper-slide" data-tab="city">
+                  <img src="img/gallery15.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
               </div>
-              <p>
+              
+            </div>
+            <p class="gallery__text-bottom">
                 Вам предоставляется 10 бесплатных скачиваний. 
                 Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
               </p>
-            </div>
-
-
              <script src="gallery.js"></script>
              <script src="select.js"></script>
 
-
-
-
-
-
-
-
-
-
-           </div>
+           
+          </div>
     </section>
+  
+
+
 </body>
 
 </html>
+-->
