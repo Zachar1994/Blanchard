@@ -1,5 +1,5 @@
 const container = document.querySelector(".hero__container")
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.hero__swiper', {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 10,

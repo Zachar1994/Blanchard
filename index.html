@@ -11,6 +11,7 @@
     integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css">
 
 
@@ -21,9 +22,10 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
-
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
 
   <title>Document</title>
 </head>
@@ -219,11 +221,11 @@
 
 
 <section class="hero">
-    <div class="swiper ">
+    <div class="hero__swiper  swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
+        <div class="hero__slide  swiper-slide"></div>
+        <div class="hero__slide  swiper-slide"></div>
+        <div class="hero__slide  swiper-slide"></div>
       </div>
     </div>
     <div class="container hero__container">
@@ -266,10 +268,26 @@
 
 
     
-       <section class="gallery swiper-section">
+   <section class="gallery swiper-section">
+
+
+        <div class="swiper-section-modal">
+          <div class="swiper-section-modal__content">
+            <div class="swiper-section-modal__content-left">
+              <img src="img/gallery1.jpg" alt="">
+            </div>
+            <div class="swiper-section-modal__content-right">
+              <button class="close">close</button>
+              <h2>Заголовок</h2>
+              <p>Text</p>
+            </div>
+          </div>
+        </div>
+
+
            <div class="container gallery__container">
-                  
-            <div class="swiper-left--content">
+       
+            <div class="gallery__left--content">
                 <div class="div">
                    <h2 class="section__head gallery__head" style="margin-top: unset; color: white; margin-bottom: 18px;">Галерея</h2>
                    <p class="list__name">Фильтр:</p>
@@ -278,13 +296,13 @@
                        <option value="city">Рисунок</option>
                   </select>
                 </div>
-                <p class="swiper-left--content-text">
+                <p class="gallery__left--content-text">
                   Вам предоставляется 10 бесплатных скачиваний. 
                   Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
                 </p> 
             </div>
 
-            <div class="swiper swiper-right--content">
+            <div class="swiper gallery__right--content">
               <div class="swiper-right-btns">
                   <button class="sw-btn swiper-btn--prev">
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -300,63 +318,64 @@
               </div>
               <div class="gallery__wrapper  swiper-wrapper">
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                    <img src="img/gallery1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="img/gallery1.jpg"  class="gallery__slide-img"  alt="">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery2.jpg" alt=""  class="gallery__slide-img">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery3.jpg" alt=""  class="gallery__slide-img">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors" >
-                  <img src="img/gallery4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery4.jpg" alt=""  class="gallery__slide-img">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery5.jpg" alt=""  class="gallery__slide-img">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery6.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery6.jpg" alt=""  class="gallery__slide-img">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery7.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery7.jpg" alt="" class="gallery__slide-img"">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="Stajors">
-                  <img src="img/gallery8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery8.jpg" alt="" class="gallery__slide-img"">
                 </div>
                 <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery9.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery9.jpg" alt=""  class="gallery__slide-img">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery10.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery10.jpg" alt=""  class="gallery__slide-img">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery11.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery11.jpg" alt=""  class="gallery__slide-img">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery12.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery12.jpg" alt=""  class="gallery__slide-img">
                 </div>
                  <div class="gallery__slide  swiper-slide" >
-                  <img src="img/gallery13.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery13.jpg" alt=""  class="gallery__slide-img">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery14.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery14.jpg" alt="" class="gallery__slide-img"">
                 </div>
                  <div class="gallery__slide  swiper-slide" data-tab="city">
-                  <img src="img/gallery15.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="img/gallery15.jpg" alt=""  class="gallery__slide-img">
                 </div>
               </div>
               
             </div>
-            <p class="gallery__text-bottom">
-                Вам предоставляется 10 бесплатных скачиваний. 
-                Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+              <p class="gallery__text-bottom">
+                  Вам предоставляется 10 бесплатных скачиваний. 
+                  Для увеличения количества скачиваний <a href="#" style="color:#C283F3">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
               </p>
-             <script src="gallery.js"></script>
-             <script src="select.js"></script>
+             <script src="JS/gallery.js"></script>
+             <script src="JS/select.js"></script>
 
            
           </div>
     </section>
+    
     <section class="catalog">
          
 
@@ -736,12 +755,94 @@
           </div>
         </li>
       </ul>
-      </div>
-      </div>
+    </div>
+  </div>
                    
          
   <script src="catalog.js"></script>
-  
+
+    </section>
+    <section class="events">
+        <div class="container events__container">
+          <h2 class="section__head">События</h2>
+          <div class="events__swiper swiper"  data-mobile="false">
+            <ul class="events__list swiper-wrapper">
+                <li class="events__item swiper-slide" style="background: none;">
+                    <div class="event__description">
+                        <img src="img/events1.jpg" alt="events">
+                        <figcaption class="event__picture-description">Музей им. Щусева<br> с 20 марта по 30 апреля</figcaption>
+                            <h3 class="event__name">Книжная гравюра в живом восприятии</h3>
+                            <p class="event__text">
+                            Один из ведущих флорентийских художников Кватроченто, основатель художественной 
+                            династии, которую продолжили его брат Давид и сын Ридольфо.
+                            </p>
+                      </div>
+                      <div class="events__link">
+                          <a href="#" class="event__link">Подробнее</a>
+                      </div> 
+                </li>
+                <li class="events__item swiper-slide"  style="background: none;">
+                    <div class="event__description">
+                        <img src="img/events2.jpg" alt="events">
+                        <figcaption class="event__picture-description">ММОМА  <br> 24 марта 19:00</figcaption>
+                            <h3 class="event__name">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                            <p class="event__text">
+                                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                            </p>
+                     </div>
+                      <div class="events__link">
+                        <a href="#" class="event__link">Подробнее</a>
+                     </div> 
+                </li>
+                <li class="events__item swiper-slide"  style="background: none;">
+                    <div class="event__description">
+                        <img src="img/events3.jpg" alt="events">
+                        <figcaption class="event__picture-description">Еврейский музей<br> с 31 марта по 21 апреля </figcaption>
+                            <h3 class="event__name">Выставка «Формация 2020»</h3>
+                            <p class="event__text">
+                               Идейные соображения высшего порядка, а также современная методология разработки играет важную роль 
+                              в формировании глубокомысленных рассуждений.
+                            </p>
+                    </div>
+                    <div class="events__link">
+                          <a href="#" class="event__link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="events__item swiper-slide"  style="background: none;">
+                    <div class="event__description">
+                        <img src="img/events4.jpg" alt="events">
+                        <figcaption class="event__picture-description">Третьяковка на Крымском валу <br>  с 30 марта по 30 апреля </figcaption>
+                           <h3 class="event__name">XXIV Международная биеннале молодого искусства</h3>
+                            <p class="event__text">
+                                Внезапно, реплицированные с зарубежных источников, современные исследования.
+                            </p>
+                       </div>
+                       <div class="events__link">
+                        <a href="#" class="event__link">Подробнее</a>
+                     </div>
+                </li>
+                <li class="events__item swiper-slide"  style="background: none;">
+                     <div class="event__description">
+                        <img src="img/events5.jpg" alt="events">
+                        <figcaption class="event__picture-description">ММАМ <br> с 8 апреля по 20 мая</figcaption>
+                            <h3 class="event__name">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                            <p class="event__text">
+                                Один из ведущих флорентийских художников Кватроченто, основатель 
+                                художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                             </p>
+                    </div>
+                    <div class="events__link">
+                        <a href="#" class="event__link">Подробнее</a>
+                    </div>
+                </li>
+          </ul>
+            <div class="newSwiper-pagination swiper-pagination"></div>
+          </div>
+           <div class="events__bottom">
+               <button class="btn">Все события</button>  
+          </div>
+    <script src="events.JS"></script>
+        </div>
     </section>
   
 

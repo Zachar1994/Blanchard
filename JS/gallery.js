@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  let gallerySlider = new Swiper(".swiper-right--content", {
+  let gallerySlider = new Swiper(".gallery__right--content", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -83,3 +83,21 @@ const selector = document.querySelector(".select")
   });
   
 });
+
+
+let swiperSlides = document.querySelector(".swiper-section").querySelectorAll(".swiper-slide");
+let modal = document.querySelector(".swiper-section-modal");
+let modalBtn = modal.querySelector(".close");
+swiperSlides.forEach(el => {
+  el.addEventListener("click", function() {
+    let img = this.querySelector("img");
+    let link = img.getAttribute("src");
+    console.log(modal.querySelector("img"));
+    modal.classList.add("modal-active");
+    modal.querySelector("img").setAttribute("src", link);
+  })
+})
+modalBtn.addEventListener("click", function() {
+  modal.classList.remove("modal-active");
+});
+
