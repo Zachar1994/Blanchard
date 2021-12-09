@@ -274,12 +274,23 @@
         <div class="swiper-section-modal">
           <div class="swiper-section-modal__content">
             <div class="swiper-section-modal__content-left">
-              <img src="img/gallery1.jpg" alt="">
+              <img src="img/gallery1.jpg" alt="" class="gallery__slide-popup">
             </div>
             <div class="swiper-section-modal__content-right">
-              <button class="close">close</button>
-              <h2>Заголовок</h2>
-              <p>Text</p>
+              <button class="close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
+                </svg>
+              </button>
+              <h2 class="popup__artist-name">Казимир Малевич</h2>
+              <h3 class="popup__picture-name">“Женщина с граблями”</h3>
+              <p class="pooup__date">1931-1932</p>
+              <p class="popup__description">
+                Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её 
+                создание в 1930-1931 годах, после того, как первый цикл был утерян после
+                Берлинской и Варшавской выставок в 1927 году.
+              </p>
             </div>
           </div>
         </div>
@@ -415,7 +426,7 @@
          </article>
       <article class="article-content" data-target="other">
          <img class="article-content__img" src="img/artist--empty.jpg" alt="Изображение">
-         <h2>Что мы о нем знаем?</h2>
+         <h2 class="article__name">Что мы о нем знаем?</h2>
          <p>Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
          <a href="#" class="article__link">В галерею</a>
       </article>
@@ -430,36 +441,41 @@
             </button>
           </div>
           <div class="ac--list__iten-bottom">
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Бенедетто ди Биндо</li>
-                <li class="ac--list__iten-tab" data-path="other">Бергоньоне, Амброджо</li>
-                <li class="ac--list__iten-tab" data-path="first">Биссоло, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Больтраффио, Джованни</li>
-                <li class="ac--list__iten-tab" data-path="other">Бонсиньори, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Боттичини, Рафаэлло</li>
-                <li class="ac--list__iten-tab" data-path="other">Брамантино</li>
-                <li class="ac--list__iten-tab" data-path="other">Бреа, Людовико</li>
-                <li class="ac--list__iten-tab" data-path="other">Бьяджо д’Антонио Туччи</li>
-             </ul>
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Веккьетта</li>
-                <li class="ac--list__iten-tab" data-path="other">Андреа Верроккьо</li>
-                <li class="ac--list__iten-tab" data-path="first">Доменико Гирландайо</li>
-                <li class="ac--list__iten-tab" data-path="other">Беноццо Гоццоли</li>
-                <li class="ac--list__iten-tab" data-path="other">Граначчи, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Грегорио ди Чекко</li>
-                <li class="ac--list__iten-tab" data-path="other">Джованни да Удине</li>
-                <li class="ac--list__iten-tab" data-path="other">Джованни ди Паоло</li>
-                <li class="ac--list__iten-tab" data-path="other">Джорджоне</li>
-             </ul>
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Парентино, Бернардо</li>
-                <li class="ac--list__iten-tab" data-path="other">Пезеллино</li>
-                <li class="ac--list__iten-tab" data-path="first">Пьетро Перуджино</li>
-                <li class="ac--list__iten-tab" data-path="other">Перуцци, Бальдассаре</li>
-                <li class="ac--list__iten-tab" data-path="other">Пизанелло</li>
-                <li class="ac--list__iten-tab" data-path="other">Пинтуриккьо</li>
-             </ul>
+             <div class="ac--list__iten-bottom-list">
+                <ul>
+                  <li class="ac--list__iten-tab" data-path="first">Бенедетто ди Биндо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бергоньоне, Амброджо</li>
+                  <li class="ac--list__iten-tab" data-path="first">Биссоло, Франческо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Больтраффио, Джованни</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бонсиньори, Франческо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Боттичини, Рафаэлло</li>
+                  <li class="ac--list__iten-tab" data-path="other">Брамантино</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бреа, Людовико</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бьяджо д’Антонио Туччи</li>
+                </ul>
+                
+                 <ul>
+                   <li class="ac--list__iten-tab" data-path="first">Веккьетта</li>
+                   <li class="ac--list__iten-tab" data-path="other">Андреа Верроккьо</li>
+                   <li class="ac--list__iten-tab" data-path="first">Доменико Гирландайо</li>
+                   <li class="ac--list__iten-tab" data-path="other">Беноццо Гоццоли</li>
+                   <li class="ac--list__iten-tab" data-path="other">Граначчи, Франческо</li>
+                   <li class="ac--list__iten-tab" data-path="other">Грегорио ди Чекко</li>
+                   <li class="ac--list__iten-tab" data-path="other">Джованни да Удине</li>
+                   <li class="ac--list__iten-tab" data-path="other">Джованни ди Паоло</li>
+                   <li class="ac--list__iten-tab" data-path="other">Джорджоне</li>
+                 </ul>
+               
+                 <ul>
+                    <li class="ac--list__iten-tab" data-path="first">Парентино, Бернардо</li>
+                    <li class="ac--list__iten-tab" data-path="other">Пезеллино</li>
+                    <li class="ac--list__iten-tab" data-path="first">Пьетро Перуджино</li>
+                    <li class="ac--list__iten-tab" data-path="other">Перуцци, Бальдассаре</li>
+                    <li class="ac--list__iten-tab" data-path="other">Пизанелло</li>
+                    <li class="ac--list__iten-tab" data-path="other">Пинтуриккьо</li>
+                 </ul>
+               
+              </div>
           </div>
         </li>
         <li class="ac--list__item">
@@ -587,7 +603,7 @@
         <div class="tab-content" data-target="another">
            <article class="article-content article-tabActive">
            <div class="empty"><img src="img/artist--empty.jpg" style="width: 100%;"   alt=""></div>
-           <h2>Что мы о нем знаем?</h2>
+           <h2 class="article__name">Что мы о нем знаем?</h2>
            <p>Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
            <a href="#" class="article__link">В галерею</a>
       </article>
@@ -602,36 +618,42 @@
             </button>
           </div>
           <div class="ac--list__iten-bottom">
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Бенедетто ди Биндо</li>
-                <li class="ac--list__iten-tab" data-path="other">Бергоньоне, Амброджо</li>
-                <li class="ac--list__iten-tab" data-path="first">Биссоло, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Больтраффио, Джованни</li>
-                <li class="ac--list__iten-tab" data-path="other">Бонсиньори, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Боттичини, Рафаэлло</li>
-                <li class="ac--list__iten-tab" data-path="other">Брамантино</li>
-                <li class="ac--list__iten-tab" data-path="other">Бреа, Людовико</li>
-                <li class="ac--list__iten-tab" data-path="other">Бьяджо д’Антонио Туччи</li>
-             </ul>
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Веккьетта</li>
-                <li class="ac--list__iten-tab" data-path="other">Андреа Верроккьо</li>
-                <li class="ac--list__iten-tab" data-path="first">Доменико Гирландайо</li>
-                <li class="ac--list__iten-tab" data-path="other">Беноццо Гоццоли</li>
-                <li class="ac--list__iten-tab" data-path="other">Граначчи, Франческо</li>
-                <li class="ac--list__iten-tab" data-path="other">Грегорио ди Чекко</li>
-                <li class="ac--list__iten-tab" data-path="other">Джованни да Удине</li>
-                <li class="ac--list__iten-tab" data-path="other">Джованни ди Паоло</li>
-                <li class="ac--list__iten-tab" data-path="other">Джорджоне</li>
-             </ul>
-             <ul class="ac--list__iten-bottom-list">
-                <li class="ac--list__iten-tab" data-path="first">Парентино, Бернардо</li>
-                <li class="ac--list__iten-tab" data-path="other">Пезеллино</li>
-                <li class="ac--list__iten-tab" data-path="first">Пьетро Перуджино</li>
-                <li class="ac--list__iten-tab" data-path="other">Перуцци, Бальдассаре</li>
-                <li class="ac--list__iten-tab" data-path="other">Пизанелло</li>
-                <li class="ac--list__iten-tab" data-path="other">Пинтуриккьо</li>
-             </ul>
+             <div class="ac--list__iten-bottom-list">
+                <ul>
+                  <li class="ac--list__iten-tab" data-path="first">Бенедетто ди Биндо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бергоньоне, Амброджо</li>
+                  <li class="ac--list__iten-tab" data-path="first">Биссоло, Франческо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Больтраффио, Джованни</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бонсиньори, Франческо</li>
+                  <li class="ac--list__iten-tab" data-path="other">Боттичини, Рафаэлло</li>
+                  <li class="ac--list__iten-tab" data-path="other">Брамантино</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бреа, Людовико</li>
+                  <li class="ac--list__iten-tab" data-path="other">Бьяджо д’Антонио Туччи</li>
+                </ul>
+                
+                 <ul>
+                    <li class="ac--list__iten-tab" data-path="first">Веккьетта</li>
+                    <li class="ac--list__iten-tab" data-path="other">Андреа Верроккьо</li>
+                    <li class="ac--list__iten-tab" data-path="first">Доменико Гирландайо</li>
+                    <li class="ac--list__iten-tab" data-path="other">Беноццо Гоццоли</li>
+                    <li class="ac--list__iten-tab" data-path="other">Граначчи, Франческо</li>
+                    <li class="ac--list__iten-tab" data-path="other">Грегорио ди Чекко</li>
+                    <li class="ac--list__iten-tab" data-path="other">Джованни да Удине</li>
+                    <li class="ac--list__iten-tab" data-path="other">Джованни ди Паоло</li>
+                    <li class="ac--list__iten-tab" data-path="other">Джорджоне</li>
+                 </ul>
+              
+                 <ul>
+                   <li class="ac--list__iten-tab" data-path="first">Парентино, Бернардо</li>
+                   <li class="ac--list__iten-tab" data-path="other">Пезеллино</li>
+                   <li class="ac--list__iten-tab" data-path="first">Пьетро Перуджино</li>
+                   <li class="ac--list__iten-tab" data-path="other">Перуцци, Бальдассаре</li>
+                   <li class="ac--list__iten-tab" data-path="other">Пизанелло</li>
+                   <li class="ac--list__iten-tab" data-path="other">Пинтуриккьо</li>
+                 </ul>
+                
+
+             </div>
           </div>
         </li>
         <li class="ac--list__item">
@@ -841,8 +863,183 @@
            <div class="events__bottom">
                <button class="btn">Все события</button>  
           </div>
-    <script src="events.JS"></script>
+         <script src="events.JS"></script>
         </div>
+    </section>
+
+
+    <section class="publishing swiper-section">
+       <div class="container publishing__container">
+
+         <div class="publishing__left-content">
+              <h3 class="section__head" style="color: white;">Издания</h3>
+
+              <h2 class="checkbox__h2">Категории</h2>
+              <div class="checkbox__list">
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Бестселлеры
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Искусство
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Архитектура
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Дизайн
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Мода
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Детям
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Художественная литература
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Публицистика
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Путеводители
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Философия
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Учебная литература
+                </label>
+                <label class="checkbox__label">
+                  <input type="checkbox" class="checkbox" id="check"><span></span> Журналы и газеты
+                </label>
+              </div>
+
+              <div class="publishing__left-content-bottom">
+                <p>Цена</p>
+                 <div class="price">
+                     <label for="from" class="price__from">От</label>
+                     <input type="number" id="from">
+                     <label for="to">до</label>
+                     <input type="number" id="to">
+                     <p>руб.</p>
+                  </div>
+              </div>
+                
+              <script src="publishing-checkbox.js"></script>
+
+         </div>
+         <div class="swiper publishing__right-content">
+             <div class="swiper-right-btns">
+                 <button class="sw-btn swiper-btn--prev">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+                    </svg>
+                 </button>
+              <div class="swiper-pagination--right"></div>
+                 <button class="sw-btn swiper-btn--next">
+                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+                     </svg>
+                </button>
+             </div>
+             <div class="publishing__wrapper  swiper-wrapper">
+              <div class="publishing__slide  swiper-slide" data-tab="Stajors">
+                  <img src="img/publish1.jpg"  class="publishing__slide-img"  alt="">
+                     <div class="publishing__price-block">
+                         <p class="publishing__name-artist">
+                            <span>Искусство цвета</span><br>
+                             Иттен, Иоханнес 
+                         </p>
+                         <p class="publishing__price">
+                           620руб.
+                         </p>
+                     </div>
+                     <button class="publishing__btn">Заказать</button>
+              </div>
+               <div class="publishing__slide  swiper-slide" data-tab="Stajors">
+                <img src="img/publish2.jpg" alt=""  class="publishing__slide-img">
+                    <div class="publishing__price-block">
+                        <p class="publishing__name-artist">
+                         <span>Искусство цвета</span><br>
+                          Иттен, Иоханнес 
+                        </p>
+                        <p class="publishing__price">
+                           620руб.
+                        </p>
+                    </div>
+                    <button class="publishing__btn">Заказать</button>
+              </div>
+              <div class="publishing__slide  swiper-slide">
+                <img src="img/publish3.jpg" alt=""  class="publishing__slide-img">
+                   <div class="publishing__price-block">
+                      <p class="publishing__name-artist">
+                        <span>Искусство цвета</span><br>
+                           Иттен, Иоханнес 
+                      </p>
+                      <p class="publishing__price">
+                         620руб.
+                      </p>
+                   </div>
+                   <button class="publishing__btn">Заказать</button>
+              </div>
+              <div class="publishing__slide  swiper-slide">
+                <img src="img/publish4.jpg" alt=""  class="publishing__slide-img">
+                      <div class="publishing__price-block">
+                         <p class="publishing__name-artist">
+                          <span>Искусство цвета</span><br>
+                               Иттен, Иоханнес 
+                         </p>
+                         <p class="publishing__price">
+                           620руб.
+                         </p>
+                      </div>
+                <button class="publishing__btn">Заказать</button>
+              </div>
+              <div class="publishing__slide  swiper-slide" data-tab="Stajors">
+                 <img src="img/publish5.jpg" alt=""  class="publishing__slide-img">
+                      <div class="publishing__price-block">
+                         <p class="publishing__name-artist">
+                           <span>Искусство цвета</span><br>
+                                  Иттен, Иоханнес 
+                         </p>
+                         <p class="publishing__price">
+                            620руб.
+                         </p>
+                      </div>
+                      <button class="publishing__btn">Заказать</button>
+              </div>
+              <div class="publishing__slide  swiper-slide">
+                <img src="img/publish6.jpg" alt=""  class="publishing__slide-img">
+                     <div class="publishing__price-block">
+                         <p class="publishing__name-artist">
+                         <span>Искусство цвета</span><br>
+                            Иттен, Иоханнес 
+                         </p>
+                         <p class="publishing__price">
+                           620руб.
+                         </p>
+                    </div>
+                    <button class="publishing__btn">Заказать</button>
+              </div>
+              <div class="publishing__slide  swiper-slide">
+                    <img src="img/publish7.jpg" alt="" class="publishing__slide-img">
+                     <div class="publishing__price-block">
+                         <p class="publishing__name-artist">
+                           <span>Искусство цвета</span><br>
+                                Иттен, Иоханнес 
+                         </p>
+                         <p class="publishing__price">
+                             620руб.
+                          </p>
+                      </div>
+                      <button class="publishing__btn">Заказать</button>
+              </div>
+            </div>
+         </div>
+       </div>
+
+       <script src="publishing.js"></script>
+     
     </section>
   
 
