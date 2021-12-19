@@ -1,10 +1,11 @@
-const container = document.querySelector(".hero__container")
+const container = document.querySelector(".container")
 const swiper = new Swiper('.hero__swiper', {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 10,
+  speed: 2000,
   autoplay: {
-    delay: 4000
+    delay: 2000
   },
   effect: "fade",
   allowTouchMove: false,

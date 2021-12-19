@@ -1,8 +1,8 @@
-let gallerySlider = new Swiper(".publishing__right-content", {
+let gallerySlider = new Swiper(".events__content", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     grid: {
-      rows: 1
+      rows: 2
     },
     spaceBetween: 30,
     pagination: {
@@ -10,8 +10,8 @@ let gallerySlider = new Swiper(".publishing__right-content", {
       type: "fraction"
     },
     navigation: {
-      nextEl: ".swiper-btn--next",
-      prevEl: ".swiper-btn--prev"
+      nextEl: ".events__btn-next",
+      prevEl: ".events__btn-prev"
     },
   
     breakpoints: {
@@ -22,7 +22,7 @@ let gallerySlider = new Swiper(".publishing__right-content", {
         },
         spaceBetween: 0
       },
-      576: {
+      630: {
         slidesPerView: 2,
         grid: {
           rows: 1
@@ -30,7 +30,7 @@ let gallerySlider = new Swiper(".publishing__right-content", {
         spaceBetween: 30
       },
   
-      1300: {
+      1023: {
         slidesPerView: 3,
         grid: {
           rows: 1

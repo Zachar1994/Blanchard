@@ -1,3 +1,12 @@
+document.querySelector(".header__btn-open").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.add("active");
+})
+document.querySelector(".nav__close").addEventListener("click", function() {
+document.querySelector(".header__nav").classList.remove("active");
+})
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".list--item__btn").forEach(item => {
     item.addEventListener("click", function() {
@@ -32,3 +41,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
   })
+
+
+  new SimpleBar(document.querySelector(".simplebar"), {
+    /* чтобы изначально ползунок был виден */
+    autoHide: false,
+    /* с помощью этого значения вы можете управлять высотой ползунка*/
+    scrollbarMaxSize: 25,
+  });
+  document.querySelectorAll(".simplebar").forEach(item => {
+
+    new SimpleBar(item, { autoHide: false , scrollbarMaxSize: 28 });
+    });
