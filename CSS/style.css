@@ -471,17 +471,19 @@ outline: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
+} 
 .hero__slide:nth-child(2) {
   background-image: url('../img/hero-slide-2.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-position: center;
 }
 .hero__slide:nth-child(3) {
   background-image: url('../img/hero-slide3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-position: center;
 }
 
@@ -1148,8 +1150,8 @@ a {
 .events__btn-prev {
   transform: rotate(180deg);
 }
-.sw-btn.swiper-button-disabled {
-  opacity: 0.4;
+.sh-btn.swiper-button-disabled {
+  opacity: 0;
   cursor: not-allowed;
 }
 .events__btn-prev, .events__btn-next {
