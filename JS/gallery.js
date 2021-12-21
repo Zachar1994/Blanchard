@@ -83,3 +83,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
   });
+
+
+  let swiperSlides = document.querySelector(".swiper-section").querySelectorAll(".swiper-slide");
+let modal = document.querySelector(".swiper-section-modal");
+let modalBtn = modal.querySelector(".close");
+swiperSlides.forEach(el => {
+  el.addEventListener("click", function() {
+    let img = this.querySelector("img");
+    let link = img.getAttribute("src");
+    console.log(modal.querySelector("img"));
+    modal.classList.add("modal-active");
+    modal.querySelector("img").setAttribute("src", link);
+  })
+})
+modalBtn.addEventListener("click", function() {
+  modal.classList.remove("modal-active");
+});

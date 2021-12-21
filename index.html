@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
 
 
@@ -17,6 +18,39 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+
+     <script>
+          ymaps.ready(init);
+                function init(){
+                    var myMap = new ymaps.Map("map", {
+                        center: [55.758468, 37.601088],
+                        zoom: 18
+                    });
+                     var myGeoObject = new ymaps.GeoObject({
+                     geometry: {
+                     type: "Point", // тип геометрии - точка*/
+                     coordinates: [55.758468, 37.601088] // координаты точки
+                      }
+                   });
+
+                   var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
+                     iconLayout: 'default#image',
+                     iconImageHref: 'img/map-point.svg',
+                     iconImageSize: [20, 20],
+                     iconImageOffset: [-3, -42]
+                    });
+
+                   // Размещение геообъекта на карте.
+                 /* myMap.geoObjects.add(myGeoObject); */
+                  myMap.geoObjects.add(myPlacemark);
+
+                } 
+     </script>
+
+
     <title>Document</title>
 
 </head>
@@ -67,12 +101,29 @@
 
 
                         
-                           <button class="header__nav-search">
-                               <img src="img/search--header.svg" alt="">
-                           </button>
-                            
-                       
-                
+                           <div class="header__nav-search">
+
+
+                            <div class="form-container">
+                              <button class="form-btn__open">
+                                <svg width="25" height="25" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                                </svg>
+                            </button>
+                              
+                              <form action="#" class="form" type="search">
+                                <button class="form-btn__submit">
+                                  <svg width="24" height="24" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white"/>
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                                  </svg>
+                                </button>
+                                 <input class="form__input" type="text">
+                              </form>
+                            </div>
+                           </div> 
+                                            
              </div>
          </div>
     <div class="header__bottom">
@@ -167,9 +218,11 @@
                   </li>
               </ul>
 
-              <form action="search" class="header__bottom-form">
-                <img src="img/entrance.svg" alt="">
+              <form action="#" type="search" class="header__bottom-form">
+
+                  <img src="img/entrance.svg" alt="">
                 <input type="search" id="search" placeholder="Поиск по сайту" class="header__bottom-form-item">
+             
               </form>
 
         </div>
@@ -218,14 +271,35 @@
        </section>
 
        <section class="gallery swiper-section">
+
+        <div class="swiper-section-modal">
+          <div class="swiper-section-modal__content">
+            <div class="swiper-section-modal__content-left">
+              <img src="img/gallery1.jpg"  alt=""/>
+            </div>
+            <div class="swiper-section-modal__content-right">
+              <button class="close"><img src="img/modal-exit.svg" alt=""></button>
+              <h3 class="modal__name">Казимир Малевич</h3>
+              <h4 class="picture__name">"Женщина с граблями"</h4>
+              <p class="picture__date">1931-1932</p>
+              <p class="picture__description">
+                Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930-1931 годах, после того,
+                как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
            <div class="container gallery__container">
                <div class="gallery__left-content">
                   <div>
                     <h2 class="section__head" style="color: white;">Галерея</h2>
-                    <h3 class="select__head">Фильтры</h3>
+                    <h3 class="select__head">Фильтр:</h3>
                      <select name="select" id="select" class="select">
-                        <option value="Stajors">Стажёры</option>
-                        <option value="city">Страны</option>
+                        <option value="Stajors">Живопись</option>
+                        <option value="city">Рисунок</option>
                      </select>
                   </div>
 
@@ -379,11 +453,13 @@
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Джованни ди Паоло</a></li>
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Джорджоне</a></li>
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Парентино, Бернардо</a></li>
-                        <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Пезеллино</a></li>
+                        <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Пизанелло</a></li>
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Пьетро Перуджино</a></li>
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Перуцци, Бальдассаре</a></li>
-                        <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Пизанелло</a></li>
+
                         <li class="catalog-item"><a class="ac--list__iten-tab" href="#artist" data-path="first">Пинтуриккьо</a></li>
+                        
+                        
                       </ul>                 
                   </li>
                   <li class="ac--list__item">
@@ -467,7 +543,7 @@
                     </div>
                   </li>
                   <li class="ac--list__item">
-                    <div class="ac--list__item-top" tabindex="0">
+                    <div class="ac--list__item-top top__last" tabindex="0">
                       <h3>C 2000 г.</h3>
                       <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
                     </div>
@@ -500,6 +576,8 @@
                          <img src="img/arrow__events.svg" alt="">
                       </button>
                   </div>
+                   
+                  <div class="swiper-pagination"></div>
 
                   <div class="swiper-wrapper">
                     <div class="events__slide swiper-slide">
@@ -514,67 +592,70 @@
                               </p>
                          </div>
                          <div class="events__slide-bottom">
-                           <a href="#" class="events__link">Подробнее</a>
+                           <a href="#" class="events__link focus__bg">Подробнее</a>
                          </div>
                     </div>
                    <div class="events__slide  swiper-slide">
                          <div class="events__slide-top">
                              <img src="img/events2.jpg" alt="" class="events__picture">
-                             <figcaption>Музей им. Щусева<br>
-                              с 20 марта по 30 апреля</figcaption>
-                              <h3 class="events__name">Книжная гравюра в живом восприятии</h3>
+                             <figcaption>ММОМА
+                              <br>24 марта 19:00
+                              </figcaption>
+                              <h3 class="events__name">«Открытая дискуссия». <br> Дмитрий Петров и Сергей Ильин.</h3>
                              <p class="events__text">
-                              Один из ведущих флорентийских художников Кватроченто, основатель 
-                              художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                              Высокий уровень вовлечения представителей целевой аудитории является 
+                              четким доказательством простого факта.
                              </p>
                          </div>
                          <div class="events__slide-bottom">
-                            <a href="#" class="events__link">Подробнее</a>
+                            <a href="#" class="events__link   focus__bg">Подробнее</a>
                          </div>
                     </div>
                     <div class="events__slide   swiper-slide">
                           <div class="events__slide-top">
                              <img src="img/events3.jpg" alt="" class="events__picture">
-                              <figcaption>Музей им. Щусева<br>
-                               с 20 марта по 30 апреля</figcaption>
-                              <h3 class="events__name">Книжная гравюра в живом восприятии</h3>
+                              <figcaption>Еврейский музей
+                                <br>с 31 марта по 21 апреля
+                              </figcaption>
+                              <h3 class="events__name">Выставка «Формация 2020»</h3>
                               <p class="events__text">
-                               Один из ведущих флорентийских художников Кватроченто, основатель 
-                               художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                Идейные соображения высшего порядка, а также современная методология
+                                разработки играет важную роль в формировании глубокомысленных рассуждений.
                               </p>
                           </div>
                           <div class="events__slide-bottom">
-                             <a href="#" class="events__link">Подробнее</a>
+                             <a href="#" class="events__link  focus__bg ">Подробнее</a>
                          </div>
                     </div>
                     <div class="events__slide  swiper-slide">
                           <div class="events__slide-top">
                              <img src="img/events4.jpg" alt="" class="events__picture">
-                             <figcaption>Музей им. Щусева<br>
-                              с 20 марта по 30 апреля</figcaption>
-                             <h3 class="events__name">Книжная гравюра в живом восприятии</h3>
+                             <figcaption>Третьяковка на Крымском валу<br>
+                              с 30 марта по 30 апреля
+                              </figcaption>
+                             <h3 class="events__name">XXIV Международная биеннале молодого искусства</h3>
                               <p class="events__text">
-                               Один из ведущих флорентийских художников Кватроченто, основатель 
-                               художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                Идейные соображения высшего порядка, а также современная методология
+                                 разработки играет важную роль в формировании глубокомысленных рассуждений.
                                </p>
                           </div>
                           <div class="events__slide-bottom">
-                             <a href="#" class="events__link">Подробнее</a>
+                             <a href="#" class="events__link  focus__bg">Подробнее</a>
                           </div>
                     </div>
                     <div class="events__slide  swiper-slide">
                        <div class="events__slide-top">
                            <img src="img/events5.jpg" alt="" class="events__picture">
-                           <figcaption>Музей им. Щусева<br>
-                            с 20 марта по 30 апреля</figcaption>
-                            <h3 class="events__name">Книжная гравюра в живом восприятии</h3>
+                           <figcaption>ММАМ<br>
+                            с 8 апреля по 20 мая</figcaption>
+                            <h3 class="events__name">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
                             <p class="events__text">
                             Один из ведущих флорентийских художников Кватроченто, основатель 
                             художественной династии, которую продолжили его брат Давид и сын Ридольфо.
                             </p>
                        </div>
                        <div class="events__slide-bottom">
-                         <a href="#" class="events__link">Подробнее</a>
+                         <a href="#" class="events__link   focus__bg">Подробнее</a>
                        </div>
                     </div>
                  
@@ -584,6 +665,11 @@
             </div>
             <script src="JS/events.js"></script>
        </section>
+
+
+
+
+
        <section class="projects swiper-section">
 
         
@@ -593,49 +679,79 @@
                     <p class="projects__text">
                       Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности 
                       однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства 
-                      смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус 
+                      смешаны с не уникальными данными<br> до степени совершенной неузнаваемости, из-за чего возрастает их статус 
                       бесполезности. Прежде всего, постоянное информационно-пропагандистское  <span class="tooltip-container tooltip-2">
-                        <span class="tooltip">i</span>
+                        <span class="tooltip">
+                          <svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/>
+                          </svg>
+                        </span>
                       </span>    обеспечение нашей деятельности 
                       однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что 
                       действия представителей оппозиции могут быть рассмотрены <span class="tooltip-container tooltip-3">
-                        <span class="tooltip">i</span>
-                      </span>     исключительно в разрезе маркетинговых и 
+                        <span class="tooltip">
+                          <svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/>
+                        </svg>
+                        </span>
+                      </span>     исключительно<br> в разрезе маркетинговых и 
                       финансовых  <span class="tooltip-container tooltip-4">
-                        <span class="tooltip">i</span>
+                        <span class="tooltip">
+                          <svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/>
+                        </svg>
+                        </span>
                       </span>    предпосылок. Банальные, но неопровержимые выводы, а также представители современных 
-                      социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны 
+                      социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны <br>
                       с не уникальными данными до 
-                      степени совершенной неузнаваемости. Подробнее: <a href="#">blanchard-art.ru/projects</a>
+                      степени совершенной неузнаваемости. Подробнее: <a href="#" class="focus__bg">blanchard-art.ru/projects</a>
                     </p>
                 </div>
 
-                <div class="swiper-container">
-                  <div class="swiper-button-prev"></div>
-           <div class="swiper-button-next"></div>
-               <div class="swiper">
-               
-               <div class="swiper-wrapper">
-                 <div class="projects__slide swiper-slide">
-                   1
-                 </div>
-                <div class="projects__slide  swiper-slide">
-                   2
-                 </div>
-                 <div class="projects__slide swiper-slide">
-                   3
-                 </div>
-                     <div class="projects__slide swiper-slide">
-                   4
-                 </div>
-                     <div class="projects__slide  swiper-slide">
-                   5
-                 </div>
-               </div>
-         
-             </div>
-           </div>
-             <script src="JS/projects.js"></script>
+
+           <div class="projects__swiper-content">
+      
+            <button class="sw-btn projects__btn-prev">prev</button>
+            <button class="sw-btn projects__btn-next">next</button>
+          
+          <div class="projects__swiper  swiper">
+          
+          
+            <div class="swiper-wrapper">
+            <div class="projects__slide swiper-slide">
+               <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>
+            <div class="projects__slide  swiper-slide">
+                <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>
+             <div class=" projects__slide swiper-slide">
+              <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>        
+            <div class="projects__slide swiper-slide">
+              <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>        <div class="projects__slide  swiper-slide">
+              <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>        <div class="projects__slide  swiper-slide">
+              <picture>
+                <img class="swiper-slide--img" src="https://phonoteka.org/src.php?src=https://phonoteka.org/uploads/posts/2021-05/thumbs/1622164116_9-phonoteka_org-p-posteri-pop-art-krasivo-11.jpg&w=460&h=320" alt="изображение">
+              </picture>
+            </div>        
+          </div>
+
+
+                <script src="JS/projects.js"></script>
+            </div>
+                  
              </div> 
        </section>
        <section class="contacts">
@@ -663,37 +779,8 @@
             <div class="contacts__bottom">
 
               <div id="map" style="width: 100%; height: 100%;"></div>
-
-
-              <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-             
-              <script type="text/javascript">
-                ymaps.ready(init);
-                function init(){
-                    var myMap = new ymaps.Map("map", {
-                        center: [55.758468, 37.601088],
-                        zoom: 15
-                    });
-                    var myGeoObject = new ymaps.GeoObject({
-                     geometry: {
-                     type: "Point", // тип геометрии - точка
-                     coordinates: [48.861019, 2.348879] // координаты точки
-                      }
-                   });
-
-                   var myPlacemark = new ymaps.Placemark([48.861019, 2.348879], {}, {
-                   iconLayout: 'default#image',
-                   iconImageHref: 'img/checkbox-inside.svg'  ,
-                   iconImageSize: [28, 40],
-                   });
-
-                   // Размещение геообъекта на карте.
-                  myMap.geoObjects.add(myGeoObject); 
-                  myMap.geoObjects.add(myPlacemark);
-
-                }
-            </script>
               
+                 
             </div>
        </section>
 
