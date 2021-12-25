@@ -1,4 +1,4 @@
-let gallerySlider = new Swiper(".projects__swiper", {
+let projectSlider = new Swiper(".projects__swiper", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -35,7 +35,7 @@ let gallerySlider = new Swiper(".projects__swiper", {
       grid: {
         rows: 1
       },
-      spaceBetween: 50
+      spaceBetween: 40
     }
   },
 
