@@ -19,8 +19,4 @@
              });
 
 
-             document.querySelector(".tooltip").addEventListener("click", function() {
-              document.querySelector("#tooltip1,#tooltip2,#tooltip3").classList.add("active");
-          })
-          
-         
+       

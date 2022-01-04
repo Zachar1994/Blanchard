@@ -3,9 +3,9 @@ const swiper = new Swiper('.hero__swiper', {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 10,
-  speed: 2000,
+  speed: 3000,
   autoplay: {
-    delay: 2000
+    delay: 3000
   },
   effect: "fade",
   allowTouchMove: false,

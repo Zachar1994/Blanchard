@@ -6,7 +6,7 @@ let projectSlider = new Swiper(".projects__swiper", {
   },
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination--right",
+    el: ".projects__pagination",
     type: "fraction"
   },
   navigation: {
@@ -20,7 +20,7 @@ let projectSlider = new Swiper(".projects__swiper", {
       grid: {
         rows: 1
       },
-      spaceBetween: 0
+      spaceBetween: 5
     },
     576: {
       slidesPerView: 2,

@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let gallerySlider = new Swiper(".gallery__right-content", {
     slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerGroup: 2,
     grid: {
       rows: 2
     },
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination--right",
+      el: ".gallery__pagination",
       type: "fraction"
     },
     navigation: {
