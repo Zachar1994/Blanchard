@@ -41,6 +41,7 @@ let eventSlider = new Swiper(".events__content", {
         },
         spaceBetween: 50
       }
+
     },
   
     a11y: {

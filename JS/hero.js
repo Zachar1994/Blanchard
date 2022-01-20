@@ -3,7 +3,7 @@ const swiper = new Swiper('.hero__swiper', {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 10,
-  speed: 3000,
+  speed: 4000,
   autoplay: {
     delay: 3000
   },

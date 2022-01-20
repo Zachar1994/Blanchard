@@ -1,12 +1,12 @@
 document.querySelector(".header__btn-open").addEventListener("click", function() {
     document.querySelector(".header__nav").classList.add("active");
 })
-document.querySelector(".nav__close").addEventListener("click", function() {
+document.querySelector(".header__nav--close").addEventListener("click", function() {
 document.querySelector(".header__nav").classList.remove("active");
 })
 
 
-document.querySelector(".form-btn__open").addEventListener("click", function() {
+document.querySelector(".form-container__open").addEventListener("click", function() {
   document.querySelector(".form").classList.add("form__active");
   this.classList.add("active");
 })
@@ -17,7 +17,7 @@ document.addEventListener("click", function(e) {
   if (!target.closest(".form-container")) {
   form.classList.remove("form__active");
     form.querySelector("input").value = "";
-    document.querySelector(".form-btn__open").classList.remove("active")
+    document.querySelector(".form-container__open").classList.remove("active")
   }
 })
 

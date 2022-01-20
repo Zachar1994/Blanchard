@@ -5,64 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Blanchard.ico" type="image/x-icon">
   <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css"
-    integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="CSS/style.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
-    integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js" integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-
-
-  <script>
-    ymaps.ready(init);
-    function init() {
-      var myMap = new ymaps.Map("map", {
-        center: [55.758468, 37.601088],
-        zoom: 18
-      });
-      var myGeoObject = new ymaps.GeoObject({
-        geometry: {
-          type: "Point", // тип геометрии - точка*/
-          coordinates: [55.758468, 37.601088] // координаты точки
-        }
-      });
-
-      var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-point.svg',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-3, -42]
-      });
-
-      // Размещение геообъекта на карте.
-      /* myMap.geoObjects.add(myGeoObject); */
-      myMap.geoObjects.add(myPlacemark);
-
-    } 
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
 
 
-  <title>Document</title>
+  <script src="JS/header.js" defer></script>
+  <script src="JS/hero.js" defer></script>
+  <script src="JS/catalog.js" defer></script>
+  <script src="JS/events.js" defer></script>
+  <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+  <script src="https://unpkg.com/tippy.js@6" defer></script>
+  <script src="JS/tooltip.js" defer></script>
+  <script src="JS/projects.js" defer></script>
+  <script src="JS/just-validate.min.js" defer></script>
+  <script src="JS/inputmask.min.js" defer></script>
+  <script src="JS/validate-form.js" defer></script>
+  <script src="JS/map.js" defer></script>
 
+  <title>"Blanchard" - художественная галерея</title>
 </head>
 
 <body>
-  <header>
+  <header class="header">
+
     <div class="header__top">
 
-      <div class="container header__container">
-
+      <div class="container header__top--container">
 
         <button class="header__btn-open">
           <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,12 +51,12 @@
           </svg>
         </button>
 
-        <a href="#" class="header__logo">
+        <a href="#" class="header__top--logo">
           <img src="img/logo.svg" alt="" class="header__logo">
         </a>
 
         <nav class="header__nav">
-          <button class="nav__close">
+          <button class="header__nav--close">
             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2.09094" width="29.5699" height="2.95699" transform="rotate(45 2.09094 0)" fill="white" />
               <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="white" />
@@ -106,9 +85,8 @@
 
         <div class="header__nav-search">
 
-
           <div class="form-container">
-            <button class="form-btn__open">
+            <button class="form-container__open">
               <svg width="25" height="25" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="9.15446" height="2.28862"
                   transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
@@ -130,14 +108,14 @@
               </button>
               <input class="form__item" type="text">
             </form>
+
           </div>
         </div>
-
       </div>
     </div>
-    <div class="header__bottom">
-      <div class="container bottom__container">
 
+    <div class="header__bottom">
+      <div class="container header__bottom--container">
 
         <ul class="list">
           <li class="list--item">
@@ -228,13 +206,15 @@
         </ul>
 
         <form action="#" class="header__bottom-form">
-          <img src="img/entrance.svg" alt="">
+          <button type="submit">
+            <img src="img/entrance.svg" alt="">
+          </button>
           <input type="search" id="search" placeholder="Поиск по сайту" class="header__bottom-form-item">
         </form>
 
       </div>
     </div>
-    <script src="JS/header.js"></script>
+
   </header>
 
 
@@ -251,7 +231,7 @@
       <!-- If we need pagination -->
 
     </div>
-    <div class="container swiper__container">
+    <div class="container hero__container">
       <div>
         <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
         <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных
@@ -260,13 +240,11 @@
 
       <button class="hero__btn">Подписаться на рассылку</button>
     </div>
-
-    <script src="JS/hero.js"></script>
   </section>
 
   <section class="about" id="about">
     <div class="container about__container">
-      <h2 class="section__head">О нас</h2>
+      <h2 class="container__head">О нас</h2>
 
       <p class="about__text">
         Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет
@@ -290,10 +268,10 @@
         </div>
         <div class="swiper-section-modal__content-right">
           <button class="close"><img src="img/modal-exit.svg" alt=""></button>
-          <h3 class="modal__name">Казимир Малевич</h3>
-          <h4 class="picture__name">"Женщина с граблями"</h4>
-          <p class="picture__date">1931-1932</p>
-          <p class="picture__description">
+          <h3 class="artist-name">Казимир Малевич</h3>
+          <h4 class="picture-name">"Женщина с граблями"</h4>
+          <p class="picture-date">1931-1932</p>
+          <p class="picture-description">
             Картина из второй серии крестьянского цикла работ Казимира Малевича.
             Художник принялся за её создание в 1930-1931 годах, после того,
             как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
@@ -306,8 +284,8 @@
     <div class="container gallery__container">
       <div class="gallery__left-content">
         <div>
-          <h2 class="section__head" style="color: white;">Галерея</h2>
-          <h3 class="select__head">Фильтр:</h3>
+          <h2 class="container__head" style="color: white;">Галерея</h2>
+          <h3 class="gallery__left-content-head">Фильтр:</h3>
           <select name="select" id="select" class="select">
             <option value="painting">Живопись</option>
             <option value="drawing">Рисунок</option>
@@ -317,15 +295,15 @@
         <form action="#" method="get" class="gallery__form">
           <label>
             <input type="checkbox" id="check"><span></span>
-            <span class="form__text">XIX век</span>
+            <span class="gallery__form-text">XIX век</span>
           </label>
           <label>
             <input type="checkbox" id="check"><span></span>
-            <span class="form__text">XX век</span>
+            <span class="gallery__form-text">XX век</span>
           </label>
           <label>
             <input type="checkbox" id="check"><span></span>
-            <span class="form__text">Современность</span>
+            <span class="gallery__form-text">Современность</span>
           </label>
         </form>
 
@@ -343,51 +321,51 @@
         </div>
 
         <div class="swiper-wrapper">
-          <div class="gallery__slide swiper-slide slides-active" data-tab="painting">
+          <button class="gallery__slide swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery1.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery2.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide   swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide   swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery3.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery4.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery5.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery6.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery7.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide slides-active" data-tab="painting">
+          </button>
+          <button class="gallery__slide  swiper-slide slides-active" data-tab="painting">
             <img src="img/gallery8.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery9.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery10.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery11.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery12.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery13.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery14.jpg" alt="" class="swiper__slide-img">
-          </div>
-          <div class="gallery__slide  swiper-slide" data-tab="drawing">
+          </button>
+          <button class="gallery__slide  swiper-slide" data-tab="drawing">
             <img src="img/gallery15.jpg" alt="" class="swiper__slide-img">
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -398,7 +376,7 @@
   <section class="catalog" id="catalog">
     <div class="container catalog__container">
       <div class="heading">
-        <h2 class="section__head">Каталог</h2>
+        <h2 class="container__head">Каталог</h2>
         <p class="catalog__text">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
           типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
@@ -415,7 +393,7 @@
         <article class="article-content article-tabActive" data-target="first">
           <img class="article-content__img" src="img/pic-accordeon1.jpg" alt="Изображение">
           <h3>Доменико Гирландайо</h3>
-          <p class="article__descr">
+          <p class="article-descr">
             <span>2 июня 1448 — 11 января 1494.</span> <br>
             Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
             которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
@@ -427,7 +405,7 @@
         <article class="article-content" data-target="other">
           <img class="article-content__img" src="img/artist--empty.jpg" alt="Изображение">
           <h3>Что мы о нём знаем?</h3>
-          <p class="article__descr">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+          <p class="article-descr">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
           <a href="#">В галерею</a>
         </article>
 
@@ -436,97 +414,97 @@
         <ul class="ac--list" id="accordion">
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <h3 class="ac--list__item-btn-date focus__bg">C 1400 по 1499 гг.</h3>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1400 по 1499 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
               <ul class="catalog-list">
                 <li class="catalog-item"><a class="ac--list__iten-tab focus__bg" href="#artist"
-                    data-path="first">Бенедетто
+                    data-path="other">Бенедетто
                     ди&nbsp;Биндо </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
                     data-path="other">Бергоньоне
                     Амброджо </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Биссоло
+                    data-path="other">Биссоло
                     Франческо </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
                     data-path="other">Больтраффио,
                     Джованни </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Бонсиньори,Франческо </a></li>
+                    data-path="other">Бонсиньори,Франческо </a></li>
 
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Боттичини,Рафаэлло </a></li>
+                    data-path="other">Боттичини,Рафаэлло </a></li>
 
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
                     data-path="other">Брамантино </a></li>
 
 
-                <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist" data-path="first">
+                <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist" data-path="other">
                     Бреа,Людовико
                   </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist" data-path="other">
                     Бьяджо
                     д&rsquo;Антонио Туччи </a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Веккьетта</a>
+                    data-path="other">Веккьетта</a>
                 </li>
 
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Андреа
+                    data-path="other">Андреа
                     Верроккьо</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="other">Доменико
+                    data-path="first">Доменико
                     Гирландайо</a></li>
 
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Беноццо
+                    data-path="other">Беноццо
                     Гоццоли</a></li>
 
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
                     data-path="other">Граначчи,
                     Франческо</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Грегорио ди
+                    data-path="other">Грегорио ди
                     Чекко</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
                     data-path="other">Джованни да
                     Удине</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Джованни ди
+                    data-path="other">Джованни ди
                     Паоло</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Джорджоне</a>
+                    data-path="other">Джорджоне</a>
                 </li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Парентино,
+                    data-path="other">Парентино,
                     Бернардо</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Пизанелло</a>
+                    data-path="other">Пизанелло</a>
                 </li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Пьетро
+                    data-path="other">Пьетро
                     Перуджино</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Перуцци,
+                    data-path="other">Перуцци,
                     Бальдассаре</a></li>
                 <li class="catalog-item"><a class="ac--list__iten-tab  focus__bg" href="#artist"
-                    data-path="first">Пинтуриккьо</a>
+                    data-path="other">Пинтуриккьо</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 1500 по 1599 гг.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1500 по 1599 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -535,14 +513,14 @@
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 1600 по 1699 гг.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1600 по 1699 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -551,14 +529,14 @@
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 1700 по 1799 гг.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1700 по 1799 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -567,14 +545,14 @@
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 1800 по 1899 гг.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1800 по 1899 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -583,14 +561,14 @@
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 1900 по 1999 гг.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 1900 по 1999 гг.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -599,14 +577,14 @@
           </li>
           <li class="ac--list__item">
             <div class="ac--list__item-top top__last" tabindex="0">
-              <button class="ac--list__item-btn-date focus__bg">C 2000 г.</button>
-              <button class="ac-list__item-btn" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
+              <button class="btn-top-date focus__bg">C 2000 г.</button>
+              <button class="btn-top-arrow" tabindex="-1"><img src="img/arrow-accordeon.svg" alt=""> </button>
             </div>
             <div class="ac--list__iten-bottom">
-              <div class="empty__picture">
+              <div class="empty-picture">
                 <img src="img/empty-picture.png" alt="">
               </div>
-              <div class="empty__description">
+              <div class="empty-description">
                 <h3>Здесь пока пусто</h3>
                 <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
                 <a href="#gallery" class="focus__bg">В галерею</a>
@@ -616,26 +594,22 @@
         </ul>
       </div>
     </div>
-    <script src="JS/catalog.js"></script>
   </section>
 
   <section class="events swiper-section" id="events">
     <div class="container events__container">
-      <h2 class="section__head">События</h2>
+      <h2 class="container__head">События</h2>
 
       <div class="events__btns">
         <button class="sh-btn events__btn-prev">
-          <img src="img/arrow__events.svg" alt="">
+           <img src="img/arrow__events.svg" alt="">
         </button>
         <button class="sh-btn events__btn-next">
-          <img src="img/arrow__events.svg" alt="">
+           <img src="img/arrow__events.svg" alt="">
         </button>
       </div>
 
-
-
       <div class="swiper events__content">
-
 
         <div class="swiper-pagination"></div>
 
@@ -715,12 +689,9 @@
               <a href="#" class="events__link   focus__bg">Подробнее</a>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
-    <script src="JS/events.js"></script>
   </section>
 
 
@@ -732,11 +703,11 @@
 
     <div class="container projects__container">
       <div class="projects__left-content">
-        <h2 class="section__head">Проекты</h2>
+        <h2 class="container__head">Проекты</h2>
         <p class="projects__text">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
           однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства
-          смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус
+          смешаны с не уникальными данными&shy; до  степени совершенной неузнаваемости, из-за чего возрастает их статус
           бесполезности. Прежде всего, постоянное информационно-пропагандистское
           <button id="tooltip1" class="tooltip1">
             <span class="tooltip" id="tooltip">
@@ -770,22 +741,16 @@
               </svg>
             </span>
           </button>
-          предпосылок. Банальные, но неопровержимые выводы, а также представители современных
+          предпосылок. Банальные, но неопровержимые выводы, а также представители&shy; современных
           социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны
           с не уникальными данными до
           степени совершенной неузнаваемости. Подробнее: <a href="#" class="focus__bg">blanchard-art.ru/projects</a>
         </p>
         <h3 class="projects__partners">Партнеры проектов:</h3>
-
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
-        <script src="JS/tooltip.js"></script>
-
       </div>
 
 
       <div class="projects__swiper-content">
-
 
         <button class="sw-btn projects__btn-prev"><img src="img/project-prev.svg" alt=""> </button>
         <button class="sw-btn projects__btn-next"><img src="img/project-next.svg" alt=""> </button>
@@ -796,55 +761,52 @@
           <div class="swiper-wrapper">
             <div class="projects__slide swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project1.jpg" alt="" class="project__first">
+                <img src="img/project1.jpg" alt="" class="project__link-first">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project2.jpg" alt="" class="link__picture">
+                <img src="img/project2.jpg" alt="">
               </a>
             </div>
             <div class=" projects__slide swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project3.jpg" alt="" class="link__picture">
+                <img src="img/project3.jpg" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project-slide4.png" alt="" class="link__picture">
+                <img src="img/project-slide4.png" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project-slide5.png" alt="" class="link__picture">
+                <img src="img/project-slide5.png" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project-slide6.png" alt="" class="link__picture">
+                <img src="img/project-slide6.png" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project-slide7.png" alt="" class="link__picture">
+                <img src="img/project-slide7.png" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/projects-slide8.png" alt="" class="link__picture">
+                <img src="img/projects-slide8.png" alt="">
               </a>
             </div>
             <div class="projects__slide  swiper-slide">
               <a href="#" class="projects__link">
-                <img src="img/project-slide9.png" alt="" class="link__picture">
+                <img src="img/project-slide9.png" alt="">
               </a>
             </div>
           </div>
         </div>
       </div>
-
-      <script src="JS/projects.js"></script>
-
     </div>
   </section>
 
@@ -857,16 +819,16 @@
         </div>
         <form action="#" method="get" id="form" autocomplete="off" class="contacts__form">
 
-          <input type="text" class="form__input form-control" data-validate-field="name" placeholder="Имя*"
+          <input type="text" class="contacts__form-input form-control" data-validate-field="name" placeholder="Имя*"
             autocomplete="off" name="name" id="name" />
 
-          <input type="tel" class="form__input form-control" data-validate-field="phone" placeholder="Телефон*"
+          <input type="tel" class="contacts__form-input form-control" data-validate-field="phone" placeholder="Телефон*"
             autocomplete="off" name="tel" id="phone" />
           <button class="btn btn-primary" id="submit-btn">Заказать обратный звонок</button>
         </form>
         <div class="contacts__networks">
           <p>Связаться в один клик</p>
-          <ul class="networks__list">
+          <ul class="contacts__networks-list">
             <li><a href="#"><img src="img/whatsup.svg" alt=""></a></li>
             <li><a href="#"><img src="img/telegram.svg" alt=""></a></li>
           </ul>
@@ -874,10 +836,6 @@
       </div>
     </div>
 
-
-    <script src="JS/just-validate.min.js"></script>
-    <script src="JS/inputmask.min.js"></script>
-    <script src="JS/validate-form.js"></script>
 
     <div class="contacts__bottom">
       <div id="map" style="width: 100%; height: 100%;"></div>
@@ -925,9 +883,6 @@
       </ul>
     </div>
   </footer>
-
-
-
 </body>
 
 </html>
